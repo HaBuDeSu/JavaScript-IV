@@ -34,7 +34,8 @@ class Student extends Person {
     super(attributes);
     this.previousBackground = attributes.previousBackground,
     this.className = attributes.className,
-    this.favSubjects = attributes.favSubjects
+    this.favSubjects = attributes.favSubjects,
+    this.grade = attributes.grade
   }
 
   listSubjects () {
@@ -73,7 +74,8 @@ const ken = new Student ({
   gender: "Male",
   previousBackground: "Marketing",
   className: "WEBPT5",
-  favSubjects: ["HTML", "CSS", "JavaScript"]
+  favSubjects: ["HTML", "CSS", "JavaScript"],
+  grade: 65
 })
 
 const bob = new Student ({
@@ -83,7 +85,8 @@ const bob = new Student ({
   gender: "Male",
   previousBackground: "Crab Fishing",
   className: "WEBPT97",
-  favSubjects: ["Ruby", "iOS", "React"]
+  favSubjects: ["Ruby", "iOS", "React"],
+  grade: 65
 })
 
 ken.listSubjects();
