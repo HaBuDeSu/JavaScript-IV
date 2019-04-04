@@ -27,6 +27,10 @@ class Instructor extends Person {
   grade (student, subject) {
     console.log(`${student.name} receives a perfect score on ${subject}`)
   }
+
+  changeGrade (student) {
+    student.grade = student.grade + 15*(Math.random()-.3);
+  }
 }
 
 class Student extends Person {
