@@ -37,20 +37,20 @@ class Student extends Person {
     this.favSubjects = attributes.favSubjects
   }
 
-  listsSubjects () {
-    favoriteSubjects.forEach(subject => console.log(subject));
+  listSubjects () {
+    this.favSubjects.forEach(subject => console.log(subject));
   }
 
   PRAssignment (subject) {
     console.log(`${this.name} has submitted a PR for ${subject}`);
   }
 
-  sprintChallenge () {
+  sprintChallenge (subject) {
     console.log(`${this.name} has begun sprint challenge on ${subject}`);
   }
 }
 
-class ProjectManager extends Instructors {
+class ProjectManager extends Instructor {
   constructor (attributes) {
     super(attributes);
     this.gradClassName = attributes.gradClassName,
@@ -85,3 +85,10 @@ const bob = new Student ({
   className: "WEBPT97",
   favSubjects: ["Ruby", "iOS", "React"]
 })
+
+ken.listSubjects();
+bob.listSubjects();
+ken.PRAssignment("CSS");
+bob.PRAssignment("Javascript");
+ken.sprintChallenge("React");
+bob.sprintChallenge("UI");
