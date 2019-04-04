@@ -117,3 +117,28 @@ cam.grade(ken, "CSS");
 izze.grade(bob, "Ruby");
 cam.demo("LESS compiler");
 izze.demo("Carbonation");
+
+const brandon = new ProjectManager ({
+  name: "Brandon Lent",
+  age: 30,
+  location: "Florida",
+  gender: "Male",
+  specialty: "Full Stack Web",
+  favLanguage: "React",
+  catchPhrase: "How was your day?"
+})
+
+const randy = new ProjectManager ({
+  name: "Randy Wilson",
+  age: 28,
+  location: "New York",
+  gender: "Male",
+  specialty: "Full Stack Web",
+  favLanguage: "JavaScript",
+  catchPhrase: "I feel you"
+})
+
+brandon.standUp(webpt5_lent);
+randy.standUp(webpt5_sun);
+brandon.debugsCode(ken, "prototyping");
+randy.debugsCode(bob, "closures");
