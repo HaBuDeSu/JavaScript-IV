@@ -28,8 +28,9 @@ class Instructor extends Person {
     console.log(`${student.name} receives a perfect score on ${subject}`)
   }
 
-  changeGrade (student) {
-    student.grade = student.grade + 15*(Math.random()-.3);
+  gradeAssignment (student) {
+    student.grade = student.grade + Math.round(25*(Math.random()-.3));
+    console.log(`${student.name}'s grade is now ${student.grade}`);
   }
 }
 
@@ -52,6 +53,14 @@ class Student extends Person {
 
   sprintChallenge (subject) {
     console.log(`${this.name} has begun sprint challenge on ${subject}`);
+  }
+
+  graduate () {
+    if (this.grade >= 70) {
+      console.log(`${this.name} has graduated. Congratulations!`);
+    } else {
+      console.log(`${this.name}'s grade is only ${this.grade} which is not high enough to graduate.`);
+    }
   }
 }
 
@@ -149,3 +158,8 @@ brandon.standUp("webpt5_lent");
 randy.standUp("webpt5_sun");
 brandon.debugsCode(ken, "prototyping");
 randy.debugsCode(bob, "closures");
+
+ken.graduate();
+brandon.gradeAssignment(ken);
+brandon.gradeAssignment(ken);
+ken.graduate();
