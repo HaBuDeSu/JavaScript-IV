@@ -92,3 +92,23 @@ ken.PRAssignment("CSS");
 bob.PRAssignment("Javascript");
 ken.sprintChallenge("React");
 bob.sprintChallenge("UI");
+
+const cam = new Instructor ({
+  name: "Cam Pope",
+  age: 31,
+  location: "Salt Lake City",
+  gender: "Male",
+  specialty: "Full Stack Web",
+  favLanguage: "JavaScript",
+  catchPhrase: "Don't actually do this but I'll show you"
+})
+
+const izze = new Instructor ({
+  name: "Izze Blackberry",
+  age: 1,
+  location: "On my desk",
+  gender: "N/A",
+  specialty: "Juice",
+  favLanguage: "Soda",
+  catchPhrase: "No added sugar or preservatives"
+})
