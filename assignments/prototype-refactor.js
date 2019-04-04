@@ -199,10 +199,10 @@ Prototype Refactor
 // 2. Your goal is to refactor all of this code to use ES6 Classes. The console.log() statements should still return what is expected of them.
 
 class GameObject {
-  constructor (createdAt, name, dimensions) {
-    this.createdAt = createdAt,
-    this.name = name,
-    this.dimensions = dimensions
+  constructor (attributes) {
+    this.createdAt = attributes.createdAt,
+    this.name = attributes.name,
+    this.dimensions = attributes.dimensions
   }
   destroy () {
     return `${this.name} was removed from the game.`;
@@ -210,8 +210,9 @@ class GameObject {
 }
 
 class CharacterStats extends GameObject {
-  constructor (healthPoints) {
-    this.healthPoints = healthPoints
+  constructor (stats) {
+    super(stats);
+    this.healthPoints = stats.healthPoints
   }
 
   takeDamage () {
@@ -220,10 +221,11 @@ class CharacterStats extends GameObject {
 }
 
 class Humanoid extends CharacterStats {
-  constructor (team, weapons, language) {
-    this.team = team,
-    this.weapons = weapons,
-    this.language = language
+  constructor (info) {
+    super(info);
+    this.team = info.team,
+    this.weapons = info.weapons,
+    this.language = info.language
   }
 
   greet () {
