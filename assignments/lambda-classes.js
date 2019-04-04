@@ -112,3 +112,8 @@ const izze = new Instructor ({
   favLanguage: "Soda",
   catchPhrase: "No added sugar or preservatives"
 })
+
+cam.grade(ken, "CSS");
+izze.grade(bob, "Ruby");
+cam.demo("LESS compiler");
+izze.demo("Carbonation");
