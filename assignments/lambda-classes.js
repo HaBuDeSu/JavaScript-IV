@@ -62,7 +62,7 @@ class ProjectManager extends Instructor {
   }
 
   debugsCode (student, subject) {
-    console.log(`${this.name} debugs ${student.name}'s codeon ${subject}`)
+    console.log(`${this.name} debugs ${student.name}'s code on ${subject}`)
   }
 }
 
@@ -138,7 +138,7 @@ const randy = new ProjectManager ({
   catchPhrase: "I feel you"
 })
 
-brandon.standUp(webpt5_lent);
-randy.standUp(webpt5_sun);
+brandon.standUp("webpt5_lent");
+randy.standUp("webpt5_sun");
 brandon.debugsCode(ken, "prototyping");
 randy.debugsCode(bob, "closures");
